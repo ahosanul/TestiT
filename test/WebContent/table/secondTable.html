@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+ <title>	Bangladesh Army University of Engineering & Technology(BAUET)</title>
+ <link rel="stylesheet" href="\test/style.css">
+</head>
+<body>
+
+ <header>
+		    <nav>
+			    <h1>Bangladesh Army University of Engineering & Technology(BAUET)</h1>
+			    <ul id="nav">
+			        <li><a class ="HOMEblack"href="\test/profile.html">HOME</a></li>
+			        <li><a class="HOMEblack" href="\test/StrudentReg.html">Registration</a></li>
+			        <li><a class="HOMEred" href="\test/process_result.jsp">Process Result</a></li>
+			        <li><a class="HOMEblack" href="\test/view.jsp">View Result</a></li>
+			    
+			    
+			    </ul>
+		    </nav>
+	    </header>
+
+
+
+
+
+
+
+<form name="form1" id="formdata" method="post" action="\test/resultProcess">
+<br>
+<div>
+<h4>Dept. of Information and communication engineering</h4>
+<h4>Semester: 2nd <input type="hidden" value="2" name="semester">|| Students ID : <input type=text placeholder="Student's ID " name="id"><br>    </h4>
+</div>
+<table border="1">  
+<tr><th>First_Name</th><th>Sub cradite</th><th>Marks</th><th>Grade</th><th>multicredit</th></tr>  
+<tr><td><input type="hidden" value="Structured Programming Language" name="one">Structured Programming Language</td><td><select name=one_cradit id="onecradit" oninput="gpa1(),calculate()" onchange="gpa1(),calculate()"><option value=3>3</option><option value=1.5>1.5</option></select></td><td><input type="text" name="one_mark" id="onemark" oninput="gpa1(),calculate()" onchange="gpa1(),calculate()" ></td>  <td><span id="onegpa"></span></td> <td><span  id="onemulticradit" ></span></td></tr>  
+
+<tr><td><input type="hidden" value="Structured Programming Language sessional" name="two">Structured Programming Language sessional</td><td><select  name=two_cradit id="twocradit" oninput="gpa2(),calculate()" onchange="gpa2(),calculate()"><option value=3>3</option><option value=1.5>1.5</option></select></td><td><input type="text" name="two_mark" id="twomark" oninput="gpa2(),calculate()" onchange="gpa2(),calculate()" ></td><td><span id="twogpa"></span></td><td><span id="twomulticradit"></span></td></tr>  
+
+<tr><td><input type="hidden" value="Digital Electronics" name="three">Digital Electronics</td><td><select  name=three_cradit id="threecradit" oninput="gpa3(),calculate()" onchange="gpa3(),calculate()"><option value=3>3</option><option value=1.5>1.5</option></select></td><td><input type="text" name="three_mark" id="threemark" oninput="gpa3(),calculate()" onchange="gpa3(),calculate()" ></td><td><span id="threegpa"></span></td><td><span id="threemulticradit"></span></td></tr> 
+
+<tr><td><input type="hidden" value="Digital Electronics sessional" name="four">Digital Electronics sessional</td><td><select  name=four_cradit id="fourcradit" oninput="gpa4(),calculate()" onchange="gpa4(),calculate()"><option value=3>3</option><option value=1.5>1.5</option></select></td><td><input type="text" name="four_mark" id="fourmark" oninput="gpa4(),calculate()" onchange="gpa4(),calculate()" ></td><td><span id="fourgpa"></span></td><td><span id="fourmulticradit"></span></td></tr>
+
+<tr><td><input type="hidden" value="Algebra and Vector Analysis" name="five">Algebra and Vector Analysis</td><td><select  name=five_cradit id="fivecradit" oninput="gpa5(),calculate()" onchange="gpa5(),calculate()"><option value=3>3</option><option value=1.5>1.5</option></select></td><td><input type="text" name="five_mark" id="fivemark" oninput="gpa5(),calculate()" onchange="gpa5(),calculate()" ></td><td><span id="fivegpa"></span></td><td><span id="fivemulticradit"></span></td></tr>
+
+<tr><td><input type="hidden" value="Statistics for Engineers" name="six">Statistics for Engineers</td><td><select  name=six_cradit id="sixcradit" oninput="gpa6(),calculate()" onchange="gpa6(),calculate()"><option value=3>3</option><option value=1.5>1.5</option></select></td><td><input type="text" name="six_mark" id="sixmark" oninput="gpa6(),calculate()" onchange="gpa6(),calculate()" ></td><td><span id="sixgpa"></span></td><td><span id="sixmulticradit"></span></td></tr>
+
+<tr><td><input type="hidden" value="Chemistry" name="seven">Chemistry</td><td><select  name=seven_cradit id="sevencradit" oninput="gpa7(),calculate()" onchange="gpa7(),calculate()"><option value=3>3</option><option value=1.5>1.5</option></select></td><td><input type="text" name="seven_mark" id="sevenmark" oninput="gpa7(),calculate()" onchange="gpa7(),calculate()" ></td><td><span id="sevengpa"></span></td><td><span id="sevenmulticradit"></span></td></tr>
+
+</table>
+
+<p>gpa: <span id="gpa"></span></p>
+
+
+
+<input type="hidden" id="onegpai" name="one_earn">
+<input type="hidden" id="onemulticraditi" name="onemultigpa">
+
+<input type="hidden" id="twogpai" name="two_earn">
+<input type="hidden" id="twomulticraditi" name="twomultigpa">
+
+<input type="hidden" id="threegpai" name="three_earn">
+<input type="hidden" id="threemulticraditi" name="threemultigpa">
+
+<input type="hidden" id="fourgpai" name="four_earn">
+<input type="hidden" id="fourmulticraditi" name="fourmultigpa">
+
+<input type="hidden" id="fivegpai" name="five_earn">
+<input type="hidden" id="fivemulticraditi" name="fivemultigpa">
+
+<input type="hidden" id="sixgpai" name="six_earn">
+<input type="hidden" id="sixmulticraditi" name="sixmultigpa">
+
+<input type="hidden" id="sevengpai" name="seven_earn">
+<input type="hidden" id="sevenmulticraditi" name="sevenmultigpa">
+
+
+
+<input type="hidden" id="result1" name="gpa">
+ <input type="submit" value="Submit" onClick="submit()">
+ 
+</form>
+
+<br>
+
+
+
+<script>
+
+function calculate() {
+  var  maincre1=document.getElementById("onecradit").value; 
+  var  maincre2=document.getElementById("twocradit").value; 
+  var  maincre3=document.getElementById("threecradit").value;
+  var  maincre4=document.getElementById("fourcradit").value;
+  var  maincre5=document.getElementById("fivecradit").value;
+  var  maincre6=document.getElementById("sixcradit").value;
+  var  maincre7=document.getElementById("sevencradit").value;
+
+  maincre1=parseFloat(maincre1);
+  maincre2=parseFloat(maincre2);
+   maincre3=parseFloat(maincre3);
+ maincre4=parseFloat(maincre4);
+ maincre5=parseFloat(maincre5);
+ maincre6=parseFloat(maincre6);
+ maincre7=parseFloat(maincre7);
+
+
+
+    multicre1=document.getElementById("onemulticradit").value;
+    multicre2=document.getElementById("twomulticradit").value;
+    multicre3=document.getElementById("threemulticradit").value;
+    multicre4=document.getElementById("fourmulticradit").value;
+    multicre5=document.getElementById("fivemulticradit").value;
+    multicre6=document.getElementById("sixmulticradit").value;
+    multicre7=document.getElementById("sevenmulticradit").value;
+  
+
+var summulti= multicre1+multicre2+multicre3+multicre4+multicre5+multicre6+multicre7;
+var sumtotal= maincre1+maincre2+maincre3+maincre4+maincre5+maincre6+maincre7;
+
+var result=summulti/sumtotal;
+result=result.toFixed(3);
+
+ document.getElementById("gpa").innerHTML=result;
+ document.getElementById("result1").value=result;
+ 
+ 
+
+}
+
+
+function gpa1()
+{
+	 var data=document.getElementById("onemark").value;
+	 var ddd1=gpa(data);
+	 document.getElementById("onegpa").innerHTML=ddd1;
+	 document.getElementById("onegpa").value=ddd1;
+	 document.getElementById("onegpai").value=ddd1;
+
+	
+     var data2=document.getElementById("onecradit").value;
+	 var temp2=earncredit(data);
+	 var ddd2=(data2*temp2);
+	 document.getElementById("onemulticradit").innerHTML=(data2*temp2);
+	 document.getElementById("onemulticradit").value=(data2*temp2);
+	 document.getElementById("onemulticraditi").value=(data2*temp2);
+	 
+	  
+	
+
+
+
+}
+
+
+function gpa2()
+{
+	var data=document.getElementById("twomark").value;
+	 var ddd3=gpa(data);
+	 document.getElementById("twogpa").innerHTML=ddd3;
+	 document.getElementById("twogpa").value=ddd3;
+	 document.getElementById("twogpai").value=ddd3;
+	 
+	 
+	 
+     var data2=document.getElementById("twocradit").value;
+	 var temp2=earncredit(data);
+	 var ddd4=(data2*temp2);
+	 document.getElementById("twomulticradit").innerHTML=ddd4;
+	 document.getElementById("twomulticradit").value=(data2*temp2);
+	 document.getElementById("twomulticraditi").value=(data2*temp2);
+
+	  
+	 
+
+}
+
+function gpa3()
+{
+	 var data=document.getElementById("threemark").value;
+	 var ddd5=gpa(data);
+	 document.getElementById("threegpa").innerHTML=ddd5;
+	 document.getElementById("threegpa").value=ddd5;
+	 document.getElementById("threegpai").value=ddd5;
+
+	
+     var data2=document.getElementById("threecradit").value;
+	 var temp2=earncredit(data);
+	 var ddd6=(data2*temp2);
+	 document.getElementById("threemulticradit").innerHTML=ddd6;
+	 document.getElementById("threemulticradit").value=(data2*temp2);
+	 document.getElementById("threemulticraditi").value=(data2*temp2);
+	 
+	  
+	
+
+
+
+}
+
+function gpa4()
+{
+	 var data=document.getElementById("fourmark").value;
+	 var ddd7=gpa(data);
+	 document.getElementById("fourgpa").innerHTML=ddd7;
+	 document.getElementById("fourgpa").value=ddd7;
+	 document.getElementById("fourgpai").value=ddd7;
+
+	
+     var data2=document.getElementById("fourcradit").value;
+	 var temp2=earncredit(data);
+	 var ddd8=(data2*temp2);
+	 document.getElementById("fourmulticradit").innerHTML=ddd8;
+	 document.getElementById("fourmulticradit").value=(data2*temp2);
+	 document.getElementById("fourmulticraditi").value=(data2*temp2);
+	 
+	  
+	
+
+
+
+}
+
+function gpa5()
+{
+	 var data=document.getElementById("fivemark").value;
+	 var ddd9=gpa(data);
+	 document.getElementById("fivegpa").innerHTML=ddd9;
+	 document.getElementById("fivegpa").value=ddd9;
+	 document.getElementById("fivegpai").value=ddd9;
+
+	
+     var data2=document.getElementById("fivecradit").value;
+	 var temp2=earncredit(data);
+	 var ddd10=(data2*temp2);
+	 document.getElementById("fivemulticradit").innerHTML=ddd10;
+	 document.getElementById("fivemulticradit").value=(data2*temp2);
+	 document.getElementById("fivemulticraditi").value=(data2*temp2);
+	 
+	  
+	
+
+
+
+}
+
+function gpa6()
+{
+	 var data=document.getElementById("sixmark").value;
+	 var ddd11=gpa(data);
+	 document.getElementById("sixgpa").innerHTML=ddd11;
+	 document.getElementById("sixgpa").value=ddd11;
+	 document.getElementById("sixgpai").value=ddd11;
+
+	
+     var data2=document.getElementById("sixcradit").value;
+	 var temp2=earncredit(data);
+	 var ddd12=(data2*temp2);
+	 document.getElementById("sixmulticradit").innerHTML=ddd12;
+	 document.getElementById("sixmulticradit").value=(data2*temp2);
+	 document.getElementById("sixmulticraditi").value=(data2*temp2);
+	 
+	  
+	
+
+
+
+}
+
+function gpa7()
+{
+	 var data=document.getElementById("sevenmark").value;
+	 var ddd13=gpa(data);
+	 document.getElementById("sevengpa").innerHTML=ddd13;
+	 document.getElementById("sevengpa").value=ddd13;
+	 document.getElementById("sevengpai").value=ddd13;
+
+	
+     var data2=document.getElementById("sevencradit").value;
+	 var temp2=earncredit(data);
+	 var ddd14=(data2*temp2);
+	 document.getElementById("sevenmulticradit").innerHTML=ddd14;
+	 document.getElementById("sevenmulticradit").value=(data2*temp2);
+	 document.getElementById("sevenmulticraditi").value=(data2*temp2);
+	  
+	
+
+
+
+}
+
+function gpa(mark)
+{
+	
+
+	if( (mark>=80) && (mark<=100) )
+  {
+  	
+    return "A+";
+        	
+  }
+  else if((mark>=75) && (mark<=79))
+  {
+    return "A";
+  }
+  else if((mark>=70) && (mark<=74))
+  {
+    return "A-";
+  }
+  else if((mark>=65) && (mark<=69))
+  {
+    return "B+";
+  }
+  else if((mark>=60) && (mark<=64))
+  {
+    return "B";
+  }
+  else if((mark>=55) && (mark<=59))
+  {
+    return "B-";
+  }
+  else if((mark>=50) && (mark<=54))
+  {
+    return "C+";
+  }
+  else if((mark>=45) && (mark<=49))
+  {
+    return "C-";
+  }
+  else if((mark>=40) && (mark<=44))
+  {
+    return "D";
+  }
+   else if((mark>=0) && (mark<=39))
+  {
+    return "fail";
+  }
+  else
+	  {
+	  return "NULL";
+	  }
+}
+function earncredit(mark)
+{
+
+	if( (mark>=80) && (mark<=100) )
+	  {
+	  	
+	    return 4;
+	        	
+	  }
+	  else if((mark>=75) && (mark<=79))
+	  {
+	    return 3.75;
+	  }
+	  else if((mark>=70) && (mark<=74))
+	  {
+	    return 3.50;
+	  }
+	  else if((mark>=65) && (mark<=69))
+	  {
+	    return 3.25;
+	  }
+	  else if((mark>=60) && (mark<=64))
+	  {
+	    return 3.00;
+	  }
+	  else if((mark>=55) && (mark<=59))
+	  {
+	    return 2.75;
+	  }
+	  else if((mark>=50) && (mark<=54))
+	  {
+	    return 2.50;
+	  }
+	  else if((mark>=45) && (mark<=49))
+	  {
+	    return 2.25;
+	  }
+	  else if((mark>=40) && (mark<=44))
+	  {
+	    return 2.00;
+	  }
+	   else if((mark>=0) && (mark<=39))
+	  {
+	    return 0;
+	  }
+	  else
+		  {
+		  return 0;
+		  }
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>
